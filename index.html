@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ti amo patata</title>
+  <style>
+    :root {
+      --pad-x: 5vw;   /* distanza dal bordo sinistro */
+      --pad-y: 7vh;   /* distanza dal bordo alto (in mezzo al cielo) */
+    }
+    html, body {
+      height: 100%;
+      margin: 0;
+      background: #000; /* cielo notturno attorno all'immagine */
+    }
+    .frame {
+      min-height: 100%;
+      display: grid;
+      place-items: center;
+    }
+    .photo {
+      position: relative;
+      width: min(100vw, 1200px);
+      margin: 0;
+    }
+    .photo img {
+      display: block;
+      width: 100%;
+      height: auto;
+      user-select: none;
+      -webkit-user-drag: none;
+    }
+    .caption {
+      position: absolute;
+      left: var(--pad-x);
+      top: var(--pad-y);
+      margin: 0;
+      font: 700 clamp(22px, 3.8vw, 56px)/1.1 "Helvetica Neue", Arial, system-ui, sans-serif;
+      color: #fff;
+      text-shadow:
+        0 0 6px rgba(0,0,0,.85),
+        0 2px 12px rgba(0,0,0,.6);
+      letter-spacing: .5px;
+    }
+  </style>
+</head>
+<body>
+  <main class="frame">
+    <figure class="photo">
+      <!-- Metti qui la tua foto nella stessa cartella con questo nome -->
+      <img src="IMG_0943.jpg" alt="Noi due sulla barca, notte" draggable="false">
+      <figcaption class="caption">Tanti auguri patata, ti amo</figcaption>
+    </figure>
+  </main>
+</body>
+</html>
